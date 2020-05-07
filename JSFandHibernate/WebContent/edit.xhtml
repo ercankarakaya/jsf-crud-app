@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head></h:head>
+<body>
+
+
+	<h:form prependId="false">
+		<h:panelGrid columns="2" cellpadding="2" cellspacing="2">
+			<h:outputText value="Id"></h:outputText>
+			<h:outputText value="${productController.p.idproduct}" />
+			<h:outputText value="Name"></h:outputText>
+			<h:inputText value="${productController.p.productName}" />
+			<h:outputText value="Price"></h:outputText>
+			<h:inputText value="${productController.p.price}" />
+			<h:outputText value="Quantity"></h:outputText>
+			<h:inputText value="${productController.p.quantity}" />
+			<h:outputText value="Description"></h:outputText>
+			<h:inputTextarea cols="20" rows="5"
+				value="${productController.p.description}" />
+			<h:commandButton value="Save" action="${productController.edit()}" />
+		</h:panelGrid>
+	</h:form>
+
+</body>
+</html>
